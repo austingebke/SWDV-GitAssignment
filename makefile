@@ -1,10 +1,10 @@
 all: xmlparser.exe
 
-xmlparser.o: XMLparse.cpp
+xmlparser.exe: XMLparse.o
+	g++ -o xmlparser.exe XMLparse.o
+
+XMLparse.o: XMLparse.cpp
 	g++ -c XMLparse.cpp pugixml.hpp pugiconfig.hpp
 
-xmlparser.exe: xmlparser.o
-	g++ -o xmlparser.exe xmlparser.o
-
 clean:
-	rm xmlparser.o xmlparser.exe
+	rm XMLparse.o xmlparser.exe
