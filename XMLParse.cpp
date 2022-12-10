@@ -18,4 +18,5 @@ int main(){
         pugi:: xml_node title=book.select_node(title_query).node();
         cout<<"Book title: "<<title.value()<<endl;
     }
+    cout<<"Finished"<<endl;
 }
